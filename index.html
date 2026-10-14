@@ -46,9 +46,11 @@ section{padding:70px 0}
 .steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .step{position:relative;padding-top:56px}
 .step::before{counter-increment:s;content:counter(s);position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--onAccent);display:grid;place-items:center;font:700 15px "Readex Pro"}
-.price{max-width:760px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.price{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.badge{display:inline-block;background:var(--accent);color:var(--onAccent);border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin-bottom:6px}
+@media (max-width:1000px) and (min-width:821px){.price{grid-template-columns:1fr 1fr}}
 .price .card{padding:26px}
-.price .big{font:700 46px "Readex Pro";color:var(--accent)}
+.price .big{font:700 40px "Readex Pro";color:var(--accent)}
 .price ul{padding:0 18px 0 0;margin:12px 0 0;color:var(--muted)}
 .hl{border:2px solid var(--accent)}
 .faq{max-width:760px;margin:0 auto}
@@ -118,13 +120,18 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-s
 
 <section style="padding-top:20px">
   <div class="wrap">
-    <div class="sec-title"><h2>الأسعار</h2><p>رسوم بسيطة مرة وحدة على كل جمعية، والأعضاء دايماً مجاناً.</p></div>
+    <div class="sec-title"><h2>الأسعار</h2><p>التسجيل مجاني للكل. اللي بيدفع بس منظّم الجمعية، والأعضاء دايماً مجاناً.</p></div>
     <div class="price">
-      <div class="card hl"><div style="color:var(--muted)">تفعيل الجمعية</div><div class="big">2 د.أ</div><div>على كل عضو، مرة وحدة</div>
-        <ul><li>جمعية فيها 10 أعضاء = 20 د.أ</li><li>كل الميزات بدون حدود</li><li>الدفع بكليك</li></ul></div>
       <div class="card"><div style="color:var(--muted)">الأعضاء</div><div class="big">مجاناً</div><div>للأبد</div>
-        <ul><li>كود إحالة: بتاخذ 5 د.أ خصم عن كل منظّم جديد بتجيبه</li><li>أي عضو بيقدر يصير منظّم</li></ul></div>
+        <ul><li>ينضموا لأي عدد جمعيات</li><li>تذكيرات وسجل التزام</li><li>تقويم «إمتى دوري»</li></ul></div>
+      <div class="card"><div style="color:var(--muted)">جمعية وحدة</div><div class="big">2 د.أ</div><div>على كل عضو، مرة وحدة</div>
+        <ul><li>جمعية فيها 10 أعضاء = 20 د.أ</li><li>شغّالة لآخر دور</li><li>فيك تجمعها من الأعضاء</li></ul></div>
+      <div class="card hl"><span class="badge">الأكثر توفيراً</span><div style="color:var(--muted)">منظّم</div><div class="big">25 د.أ</div><div>بالسنة</div>
+        <ul><li>لحد 3 جمعيات بالسنة</li><li>كل جمعية لحد 12 عضو</li><li>تفعيل فوري</li></ul></div>
+      <div class="card"><div style="color:var(--muted)">منظّم برو</div><div class="big">60 د.أ</div><div>بالسنة</div>
+        <ul><li>لحد 10 جمعيات بالسنة</li><li>كل جمعية لحد 30 عضو</li><li>تفعيل فوري</li></ul></div>
     </div>
+    <p class="note" style="text-align:center;margin-top:18px">🎉 عرض الإطلاق: أول جمعية إلك مجاناً إذا فيها 6 أعضاء أو أقل. · 🎁 جيب منظّم جديد بكودك وخذ 5 د.أ رصيد.</p>
   </div>
 </section>
 
@@ -132,16 +139,18 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-s
   <div class="wrap faq">
     <div class="sec-title"><h2>أسئلة شائعة</h2></div>
     <details><summary>هل التطبيق بيمسك فلوس الجمعية؟</summary><p>لا. الفلوس بتنتقل بينكم مباشرة (كاش أو كليك أو تحويل)، والتطبيق بيوثّق كل دفعة وكل تسليم بس.</p></details>
-    <details><summary>لازم كل الأعضاء ينزّلوا التطبيق؟</summary><p>المنظّم بيقدر يسجّل كل الدفعات لحاله. بس العضو اللي بيسجّل برقمه بيشوف أقساطه ودوره وبتوصله التذكيرات، وبيقدر يوافق على تعديل الترتيب.</p></details>
+    <details><summary>بيقدر حدا يضيفني لجمعية بدون موافقتي؟</summary><p>لا. لما المنظّم يضيفك برقمك بتوصلك دعوة، وما بتصير عضو إلا إذا وافقت. وقبل ما توافق بتشوف سجل المنظّم: كم جمعية نظّم وكم كمّلت.</p></details>
+    <details><summary>لازم كل الأعضاء يسجّلوا بالتطبيق؟</summary><p>آه، كل عضو بيسجّل برقم تلفونه ببلاش (من المتصفح أو الأندرويد) عشان يوافق على الانضمام. بعدها بيشوف أقساطه ودوره وبتوصله التذكيرات.</p></details>
+    <details><summary>بيقدر المنظّم يحذف الجمعية؟</summary><p>بعد التفعيل لا. الحذف بيصير بطلب، وما بيتنفّذ إلا إذا وافق كل الأعضاء.</p></details>
     <details><summary>بيشتغل على الآيفون؟</summary><p>آه، من المتصفح على الآيفون مباشرة، وفيك تضيفه للشاشة الرئيسية من زر المشاركة ← «إضافة إلى الشاشة الرئيسية».</p></details>
-    <details><summary>شو بيصير إذا عضو بدّه يطلع؟</summary><p>المنظّم بيستبدله بعضو جديد قبل ما يقبض، والجديد بياخذ نفس دوره، والتغيير بيظهر بسجل الجمعية لكل الأعضاء.</p></details>
+    <details><summary>شو بيصير إذا عضو بدّه يطلع؟</summary><p>بيبعت طلب انسحاب من التطبيق (قبل ما يقبض)، والمنظّم بيحط بديل بياخذ نفس دوره، والتغيير بيظهر بسجل الجمعية لكل الأعضاء.</p></details>
   </div>
 </section>
 
 <div class="wrap">
   <div class="final">
     <h2 style="font-size:clamp(26px,4vw,36px)">جاهز تنظّم جمعيتك الجاية؟</h2>
-    <p style="opacity:.85;margin:10px 0 24px">اعمل حساب برقم تلفونك ببلاش وبلّش خلال دقيقتين.</p>
+    <p style="opacity:.85;margin:10px 0 24px">اعمل حساب برقم تلفونك ببلاش، وأول جمعية إلك علينا.</p>
     <a class="btn" href="./app/">افتح التطبيق</a>
   </div>
 </div>
