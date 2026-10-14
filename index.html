@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>جمعية · نظّم جمعيتك بثقة</title>
+<meta name="description" content="تطبيق جمعية: نظّم الجمعيات الشهرية مع أهلك وصحابك وزملائك. الدور بالقرعة أو بالاتفاق، الأقساط، إيصالات كليك، والتذكيرات بمكان واحد.">
+<meta name="theme-color" content="#0F5C4D">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F4F2;--surface:#fff;--line:#DCE3DF;--fg:#12201C;--muted:#5A6964;--accent:#0F5C4D;--accentSoft:#E0EEE9;--onAccent:#fff;--gold:#E3A92F;--goldSoft:#FBF1DC;--goldText:#8A5F0E}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1916;--surface:#12201C;--line:#24352F;--fg:#E8EFEC;--muted:#93A59F;--accent:#3FB495;--accentSoft:#163A31;--onAccent:#0E1916;--goldSoft:#3A2E14;--goldText:#E3A92F}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 "IBM Plex Sans Arabic",system-ui,sans-serif}
+h1,h2,h3{font-family:"Readex Pro","IBM Plex Sans Arabic",sans-serif;line-height:1.3;margin:0}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;align-items:center;gap:10px;font:700 26px "Readex Pro";color:var(--accent);text-decoration:none}
+.brand svg{width:40px;height:40px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:12px;padding:12px 22px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--surface)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--onAccent)}
+.btn.small{padding:8px 16px;font-size:14px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px 0 70px}
+.hero h1{font-size:clamp(34px,5vw,56px)}
+.hero h1 span{color:var(--accent)}
+.lead{font-size:19px;color:var(--muted);margin:18px 0 28px;max-width:560px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+.phone{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:20px;box-shadow:0 30px 60px -30px rgba(15,92,77,.35)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px}
+.payout{background:var(--goldSoft);border-radius:14px;padding:14px;margin:12px 0}
+.payout small{color:var(--goldText);font-weight:600}
+.payout b{display:block;font:700 22px "Readex Pro"}
+.row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:14px}
+.pill{border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700}
+.ok{background:#E3F4EA;color:#1F7A4D}.no{background:#FBE7E4;color:#B23B2E}
+@media (prefers-color-scheme:dark){.ok{background:#173A28;color:#6FD39B}.no{background:#3D1F1B;color:#F08B7D}}
+section{padding:70px 0}
+.sec-title{text-align:center;max-width:640px;margin:0 auto 40px}
+.sec-title h2{font-size:clamp(28px,4vw,38px)}
+.sec-title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feat .ic{font-size:28px}.feat h3{font-size:19px;margin:8px 0 4px}.feat p{margin:0;color:var(--muted);font-size:15px}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{position:relative;padding-top:56px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--onAccent);display:grid;place-items:center;font:700 15px "Readex Pro"}
+.price{max-width:760px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.price .card{padding:26px}
+.price .big{font:700 46px "Readex Pro";color:var(--accent)}
+.price ul{padding:0 18px 0 0;margin:12px 0 0;color:var(--muted)}
+.hl{border:2px solid var(--accent)}
+.faq{max-width:760px;margin:0 auto}
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);margin:10px 0 0}
+.final{text-align:center;background:var(--accent);color:var(--onAccent);border-radius:24px;padding:50px 20px;margin:20px 0 60px}
+.final .btn{background:var(--onAccent);color:var(--accent);border-color:var(--onAccent)}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:820px){.hero{grid-template-columns:1fr;padding-top:10px}.grid,.steps,.price{grid-template-columns:1fr}section{padding:50px 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="#"><svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="28" r="14.5" fill="#E3A92F"/><g fill="currentColor"><circle cx="150.9" cy="49.1" r="14.5"/><circle cx="172" cy="100" r="14.5"/><circle cx="150.9" cy="150.9" r="14.5"/><circle cx="100" cy="172" r="14.5"/><circle cx="49.1" cy="150.9" r="14.5"/><circle cx="28" cy="100" r="14.5"/><circle cx="49.1" cy="49.1" r="14.5"/><path d="M85.6 60.5L82.1 77.1L68.6 59.8Z"/></g><path d="M112.4 62A40 40 0 1 1 75.4 68.5" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/></svg>جمعية</a>
+    <a class="btn small primary" href="./app/">افتح التطبيق</a>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <h1>نظّم <span>جمعيتك</span> بثقة.</h1>
+      <p class="lead">الدور، الأقساط، إيصالات كليك والتذكيرات بمكان واحد. كل الأعضاء بيشوفوا نفس الصورة، وما في ترتيب بيتغيّر إلا بموافقة الكل.</p>
+      <div class="ctas">
+        <a class="btn primary" href="./app/">ابدأ من المتصفح ←</a>
+        <a class="btn" href="https://expo.dev/accounts/mk.1mk/projects/jamiya/builds/1cd72fad-fb38-4f1a-8986-7d6ea8df6079">📱 حمّل تطبيق الأندرويد</a>
+      </div>
+      <p class="note">بيشتغل على الآيفون والأندرويد والكمبيوتر. الأعضاء ما بيدفعوا ولا قرش.</p>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="card">
+        <b style="font-family:'Readex Pro'">جمعية الصحاب</b>
+        <div style="color:var(--muted);font-size:13px">قسط السهم 100 د.أ · 10 أعضاء</div>
+        <div class="payout"><small>دور تشرين الأول</small><b>سارة تقبض 1,000 د.أ</b><span style="font-size:13px;color:var(--muted)">انجمع 800 من 1,000 · الاستحقاق يوم 5</span></div>
+        <div class="row"><span>أحمد · سهم</span><span class="pill ok">دفع ✓</span></div>
+        <div class="row"><span>ليلى · نص سهم</span><span class="pill ok">دفع ✓</span></div>
+        <div class="row"><span>يزن · سهم</span><span class="pill no">ما دفع</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-title"><h2>كل اللي بتحتاجه الجمعية</h2><p>من أول قرعة لآخر دور، بدون دفاتر ولا رسائل ضايعة على الواتساب.</p></div>
+    <div class="grid">
+      <div class="card feat"><div class="ic">🎲</div><h3>الدور بالقرعة أو بالاتفاق</h3><p>اسحب القرعة قدام الكل، أو رتّب حسب اتفاقكم. بعدها الترتيب بيتقفل.</p></div>
+      <div class="card feat"><div class="ic">🗳️</div><h3>تبديل بموافقة الكل</h3><p>أي تعديل أو تبديل دور ما بيتطبّق إلا إذا وافق كل الأعضاء.</p></div>
+      <div class="card feat"><div class="ic">🧾</div><h3>إيصالات كليك</h3><p>العضو بيصوّر الإيصال، والمنظّم بيوافق، والدفعة بتنسجل لحالها.</p></div>
+      <div class="card feat"><div class="ic">🔔</div><h3>تذكير قبل الاستحقاق</h3><p>إشعار قبل يومين ويوم الاستحقاق، وتذكير من المنظّم بكبسة.</p></div>
+      <div class="card feat"><div class="ic">⭐</div><h3>سجل الالتزام</h3><p>بتعرف مين بيدفع بالوقت قبل ما تقبله بجمعيتك.</p></div>
+      <div class="card feat"><div class="ic">📄</div><h3>تقرير PDF وسجل تغييرات</h3><p>كل حركة مسجّلة مع مين عملها وإمتى، وتقرير كامل بآخر الجمعية.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-title"><h2>بثلاث خطوات</h2></div>
+    <div class="steps">
+      <div class="card step"><h3>اعمل الجمعية</h3><p style="color:var(--muted);margin:6px 0 0">حدد القسط والأسهم ويوم الاستحقاق، وأضف الأعضاء بأرقامهم.</p></div>
+      <div class="card step"><h3>ادعُ الأعضاء</h3><p style="color:var(--muted);margin:6px 0 0">ابعت كود الجمعية، وكل واحد بيطلب ينضم وإنت بتوافق.</p></div>
+      <div class="card step"><h3>فعّلها وانطلقوا</h3><p style="color:var(--muted);margin:6px 0 0">بعد التفعيل بتبلّش الدفعات والتذكيرات، وكل واحد بيأكّد استلام دوره.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-title"><h2>الأسعار</h2><p>رسوم بسيطة مرة وحدة على كل جمعية، والأعضاء دايماً مجاناً.</p></div>
+    <div class="price">
+      <div class="card hl"><div style="color:var(--muted)">تفعيل الجمعية</div><div class="big">2 د.أ</div><div>على كل عضو، مرة وحدة</div>
+        <ul><li>جمعية فيها 10 أعضاء = 20 د.أ</li><li>كل الميزات بدون حدود</li><li>الدفع بكليك</li></ul></div>
+      <div class="card"><div style="color:var(--muted)">الأعضاء</div><div class="big">مجاناً</div><div>للأبد</div>
+        <ul><li>كود إحالة: بتاخذ 5 د.أ خصم عن كل منظّم جديد بتجيبه</li><li>أي عضو بيقدر يصير منظّم</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap faq">
+    <div class="sec-title"><h2>أسئلة شائعة</h2></div>
+    <details><summary>هل التطبيق بيمسك فلوس الجمعية؟</summary><p>لا. الفلوس بتنتقل بينكم مباشرة (كاش أو كليك أو تحويل)، والتطبيق بيوثّق كل دفعة وكل تسليم بس.</p></details>
+    <details><summary>لازم كل الأعضاء ينزّلوا التطبيق؟</summary><p>المنظّم بيقدر يسجّل كل الدفعات لحاله. بس العضو اللي بيسجّل برقمه بيشوف أقساطه ودوره وبتوصله التذكيرات، وبيقدر يوافق على تعديل الترتيب.</p></details>
+    <details><summary>بيشتغل على الآيفون؟</summary><p>آه، من المتصفح على الآيفون مباشرة، وفيك تضيفه للشاشة الرئيسية من زر المشاركة ← «إضافة إلى الشاشة الرئيسية».</p></details>
+    <details><summary>شو بيصير إذا عضو بدّه يطلع؟</summary><p>المنظّم بيستبدله بعضو جديد قبل ما يقبض، والجديد بياخذ نفس دوره، والتغيير بيظهر بسجل الجمعية لكل الأعضاء.</p></details>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="final">
+    <h2 style="font-size:clamp(26px,4vw,36px)">جاهز تنظّم جمعيتك الجاية؟</h2>
+    <p style="opacity:.85;margin:10px 0 24px">اعمل حساب برقم تلفونك ببلاش وبلّش خلال دقيقتين.</p>
+    <a class="btn" href="./app/">افتح التطبيق</a>
+  </div>
+</div>
+<footer>© جمعية · نظّم جمعيتك بثقة</footer>
+</body>
+</html>
