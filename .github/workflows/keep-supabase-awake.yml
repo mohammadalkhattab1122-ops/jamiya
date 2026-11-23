@@ -1,0 +1,16 @@
+# Keeps the free Supabase project from being paused for inactivity:
+# a tiny read every 2 days (support contact settings). Run it by hand from the Actions tab too.
+name: keep-supabase-awake
+on:
+  schedule:
+    - cron: '17 6 */2 * *'
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase
+        run: |
+          curl -fsS -X POST "https://ysjgwsunzccrqvtapjcy.supabase.co/rest/v1/rpc/support_contact" \
+            -H "apikey: sb_publishable_VltMFIaYFZX8RDvKXDqo7w_Jn7tal5t" \
+            -H "Content-Type: application/json" -d '{}'
